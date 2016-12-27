@@ -22,7 +22,7 @@ Kint Debugger works well with the [Debug Bar](https://wordpress.org/plugins/debu
 
 `<?php d( $var ); ?>`
 
-Example:
+Examples:
 
 <?php global $post; d( $post ); ?>
 
@@ -71,7 +71,7 @@ To print debug output inline instead, as if Debug Bar was not active, declare th
 
 `define( 'KINT_TO_DEBUG_BAR', false );`
 
-Or to print a specific dump inline, use a helper function with a second parameter `$inline`.
+Or to print a specific dump inline, use a helper function with the parameter `$inline`. The generic `dump_this()` takes `$inline` as the second parameter.
 
 Examples:
 
@@ -90,7 +90,7 @@ Kint Debugger overrides Kint's d() function in order to buffer its output for De
 
 = Restricting Output =
 
-To restrict visibility, use the kint_debug_display filter. For example, to prevent non-admins from seeing the KD output:
+To restrict visibility, use the `kint_debug_display` filter. For example, to prevent non-admins from seeing the debug output:
 
 `add_filter( 'kint_debug_display', function( $allow ) { return is_super_admin(); } );`
 
