@@ -3,7 +3,7 @@
  * Plugin Name: Kint Debugger
  * Plugin URI: https://www.wpmission.com/downloads/kint-debugger/
  * Description: Dump variables and traces in an organized and interactive display. Works with Debug Bar.
- * Version: 1.1
+ * Version: 1.1.1
  * Author: Brian Fegter, Chris Dillon
  * Author URI: https://www.wpmission.com
  * Requires: 2.5 or higher
@@ -132,48 +132,56 @@ function kint_debug_ob( $buffer ) {
 	return $buffer;
 }
 
-/**
- * Class Kint_Debug_Bar_Panel
- */
-class Kint_Debug_Bar_Panel {
-	var $_visible = true;
+if ( class_exists( 'Debug_Bar_Panel' ) ) {
 
-	function title() {
-		return __( 'Kint Debugger' );
-	}
+	if ( !class_exists( 'Kint_Debug_Bar_Panel' ) ) {
 
-	function prerender() {
-		$this->set_visible( apply_filters( 'kint_debug_display', true ) );
-	}
+		/**
+		 * Class Kint_Debug_Bar_Panel
+		 */
+		class Kint_Debug_Bar_Panel extends Debug_Bar_Panel {
+			var $_visible = true;
 
-	function is_visible() {
-		return $this->_visible;
-	}
+			function title( $title = null ) {
+				return __( 'Kint Debugger' );
+			}
 
-	function set_visible( $visible ) {
-		$this->_visible = $visible;
-	}
+			function prerender() {
+				$this->set_visible( apply_filters( 'kint_debug_display', true ) );
+			}
 
-	function render() {
-		global $kint_debug;
-		if ( is_array( $kint_debug ) ) {
-			foreach ( $kint_debug as $line ) {
-				echo $line;
+			function is_visible() {
+				return $this->_visible;
+			}
+
+			function set_visible( $visible ) {
+				$this->_visible = $visible;
+			}
+
+			function render() {
+				global $kint_debug;
+				if ( is_array( $kint_debug ) ) {
+					foreach ( $kint_debug as $line ) {
+						echo $line;
+					}
+				}
 			}
 		}
+
 	}
-}
 
-/**
- * Add our Debug Bar panel.
- *
- * @param $panels
- *
- * @return array
- */
-function kint_debug_bar_panel( $panels ) {
-	$panels[] = new Kint_Debug_Bar_Panel;
+	/**
+	 * Add our Debug Bar panel.
+	 *
+	 * @param $panels
+	 *
+	 * @return array
+	 */
+	function kint_debug_bar_panel( $panels ) {
+		$panels[] = new Kint_Debug_Bar_Panel;
 
-	return $panels;
+		return $panels;
+	}
+
+	add_filter( 'debug_bar_panels', 'kint_debug_bar_panel' );
 }
-add_filter( 'debug_bar_panels', 'kint_debug_bar_panel' );

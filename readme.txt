@@ -1,10 +1,9 @@
 === Kint Debugger ===
 Contributors: misternifty, chriswallace, cdillon27
-Donate link: https://www.wpmission.com/donate/
 Tags: debug, debugger, kint, print_r, var_dump, backtrace, debug_backtrace, trace, developer, debug bar
 Requires at least: 2.5
-Tested up to: 4.7
-Stable tag: 1.1
+Tested up to: 4.7.2
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -139,6 +138,9 @@ Yes, please use the support forum or [contact me](https://www.wpmission.com/cont
 
 == Changelog ==
 
+= 1.1.1 =
+* Fix bug when Query Monitor is installed but Debug Bar is not.
+
 = 1.1 =
 * Fix integration with Debug Bar
 * Add new helper function `dump_this()`
@@ -157,4 +159,4 @@ Yes, please use the support forum or [contact me](https://www.wpmission.com/cont
 
 == Upgrade Notice ==
 
-Fix integration with Debug Bar.
+Fix bug when Query Monitor is installed but Debug Bar is not.
