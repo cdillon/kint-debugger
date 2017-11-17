@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Kint Debugger
- * Plugin URI: https://www.wpmission.com/downloads/kint-debugger/
+ * Plugin URI: https://strongplugins.com/downloads/kint-debugger/
  * Description: Dump variables and traces in an organized and interactive display. Works with Debug Bar.
  * Version: 1.2
  * Author: Brian Fegter, Chris Dillon
- * Author URI: https://www.wpmission.com
+ * Author URI: https://strongplugins.com
  * Requires: 2.5 or higher
  * License: Dual license GPL-2.0+ & MIT (Kint is licensed MIT)
  *
