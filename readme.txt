@@ -2,7 +2,7 @@
 Contributors: misternifty, chriswallace, cdillon27
 Tags: debug, debugger, kint, print_r, var_dump, backtrace, debug_backtrace, trace, developer, debug bar
 Requires at least: 2.5
-Tested up to: 4.9
+Tested up to: 5.0
 Stable tag: 1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -124,10 +124,6 @@ Otherwise, your debug results will be inserted into the current page's HTML.
 Currently, the Kint library includes some themes and a config file. Feel free to configure as you see fit. In order to leave the Kint library intact, the plugin does not provide additional configuration.
 
 Fortunately, the developers of Kint are working on version 2 which will make it easier to configure and extend it.
-
-= Can I request a new helper function? =
-
-Yes, please use the support forum or [contact me](https://www.wpmission.com/contact).
 
 == Screenshots ==
 
