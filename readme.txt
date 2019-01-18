@@ -1,6 +1,6 @@
 === Kint Debugger ===
 Contributors: misternifty, chriswallace, cdillon27
-Tags: debug, debugger, kint, print_r, var_dump, backtrace, debug_backtrace, trace, developer, debug bar
+Tags: debug, debugger, kint, print_r, var_dump, backtrace, debug_backtrace, trace, developer, debug bar, adopt-me
 Requires at least: 2.5
 Tested up to: 5.0
 Stable tag: 1.2
@@ -10,6 +10,8 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Dump variables and traces in an organized and interactive display. Integrates seamlessly with Debug Bar.
 
 == Description ==
+
+> This plugin is up for adoption.
 
 **Kint Debugger** is a simple wrapper for [Kint](https://github.com/raveren/kint), a debugging tool to output information about variables and traces in a styled, collapsible format that makes understanding deep arrays and objects easier.
 
